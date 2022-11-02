@@ -3,13 +3,33 @@ on:
   workflow_call:
      
 jobs:
-  build_service-4:
-    name: Build service-4
+  build_service_4_for_prod:
+    if: ${{ github.ref_name == 'master' }}
+
+    name: Build Service 4
     runs-on: ubuntu-20.04
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-    - name: service1
+
+    - name: service4
+      working-directory: service_4
+      run: |
+        bash init.sh
+
+
+
+
+
+  build_service_4_for_QA:
+    if: github.ref == 'refs/heads/develop'
+    name: Build Service 4
+    runs-on: ubuntu-20.04
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: service4
       working-directory: service_4
       run: |
         bash init.sh
