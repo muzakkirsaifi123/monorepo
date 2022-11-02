@@ -6,7 +6,7 @@ jobs:
   build_service_4_for_prod:
     if: ${{ github.ref_name == 'master' }}
 
-    name: Build Service 4
+    name: [Master] Build Service 4
     runs-on: ubuntu-20.04
     steps:
     - name: Checkout
@@ -17,13 +17,9 @@ jobs:
       run: |
         bash init.sh
 
-
-
-
-
   build_service_4_for_QA:
     if: github.ref == 'refs/heads/develop'
-    name: Build Service 4
+    name: [Develop]  Build Service 4
     runs-on: ubuntu-20.04
     steps:
     - name: Checkout

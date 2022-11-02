@@ -6,7 +6,7 @@ jobs:
   build_service_3_for_prod:
     if: ${{ github.ref_name == 'master' }}
 
-    name: Build Service 3
+    name: [Master]  Build Service 3
     runs-on: ubuntu-20.04
     steps:
     - name: Checkout
@@ -23,7 +23,7 @@ jobs:
 
   build_service_3_for_QA:
     if: github.ref == 'refs/heads/develop'
-    name: Build Service 3
+    name: [Develop]  Build Service 3
     runs-on: ubuntu-20.04
     steps:
     - name: Checkout

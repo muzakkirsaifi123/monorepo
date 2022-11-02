@@ -1,3 +1,3 @@
 #!/bin/bash
 
-echo "hello service 2"
+echo "hello service 2 from branch develop "
