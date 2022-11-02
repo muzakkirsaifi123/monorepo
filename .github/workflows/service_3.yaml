@@ -1,7 +1,8 @@
 name: service-3
 on:
   workflow_call:
-     
+env: 
+    ACTOR: $GITHUB_ACTOR    
 jobs:
   build_service_3_for_prod:
     if: ${{ github.ref_name == 'master' }}

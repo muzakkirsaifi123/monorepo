@@ -1,6 +1,9 @@
 name: service-1
 on:
   workflow_call:
+
+env: 
+    ACTOR: $GITHUB_ACTOR
      
 jobs:
   build_service_1_for_prod:

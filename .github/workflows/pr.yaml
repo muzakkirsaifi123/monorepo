@@ -1,6 +1,6 @@
 name: Parent workflow for 
 on: 
-    workflow_dispatch:
+    workflow_dispatch
 
 jobs:
 
