@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "hello service 4 from branch develop "
+echo "hello service 4 from branch master "
