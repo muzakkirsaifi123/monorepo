@@ -1,9 +1,6 @@
 name: service-1
 on:
   workflow_call:
-
-env: 
-    ACTOR: $GITHUB_ACTOR
      
 jobs:
   build_service_1_for_prod:
@@ -19,7 +16,7 @@ jobs:
       working-directory: service_1
       run: |
         ./init.sh ${{ env.branch }}
-        ${{ env.ACTOR }}
+
 
 
 
@@ -36,4 +33,3 @@ jobs:
       working-directory: service_1
       run: |
         ./init.sh ${{ env.branch }}
-        ${{ env.ACTOR }}
