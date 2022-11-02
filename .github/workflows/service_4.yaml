@@ -17,10 +17,6 @@ jobs:
       run: |
         bash init.sh
 
-
-
-
-
   build_service_4_for_QA:
     if: github.ref == 'refs/heads/develop'
     name: [Develop]  Build Service 4
