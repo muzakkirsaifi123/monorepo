@@ -1,0 +1,16 @@
+name: Parent workflow
+on: workflow_dispatch
+
+jobs:
+
+  child-service-1:
+    uses: ./.github/workflows/service_1.yaml
+
+  child-service-2:
+    uses: ./.github/workflows/service_2.yaml
+
+  child-service-3:
+    uses: ./.github/workflows/service_3.yaml
+
+  child-service-4:
+    uses: ./.github/workflows/service_4.yaml
